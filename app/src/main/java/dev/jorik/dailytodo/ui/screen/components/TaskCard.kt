@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Card
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -15,20 +16,24 @@ import dev.jorik.dailytodo.domain.Task
 
 @Composable
 fun TaskCard(task: Task) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth()
+    Card(
+        onClick = { TODO("Открывать диалог взаимодействия") }
     ) {
-        Checkbox(
-            checked = task.completed,
-            onCheckedChange = {  }
-        )
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Checkbox(
+                checked = task.completed,
+                onCheckedChange = { }
+            )
 
-        Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(8.dp))
 
-        Text(
-            text = task.title,
-            style = MaterialTheme.typography.bodyMedium
-        )
+            Text(
+                text = task.title,
+                style = MaterialTheme.typography.bodyMedium
+            )
+        }
     }
 }

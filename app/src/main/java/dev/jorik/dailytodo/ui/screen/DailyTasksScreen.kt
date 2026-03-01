@@ -15,7 +15,7 @@ import dev.jorik.dailytodo.domain.AppTime
 import dev.jorik.dailytodo.domain.DailyItem
 import dev.jorik.dailytodo.domain.Task
 import dev.jorik.dailytodo.ui.screen.components.TaskCard
-import dev.jorik.dailytodo.ui.screen.components.TimeMarkerCard
+import dev.jorik.dailytodo.ui.screen.components.TimeMarker
 
 @Composable
 fun DailyTasksScreen() {
@@ -41,7 +41,7 @@ fun DailyTasksScreen() {
             items(items) { item ->
                 when (item) {
                     is Task -> TaskCard(task = item)
-                    is AppTime -> TimeMarkerCard(appTime = item)
+                    is AppTime -> TimeMarker(appTime = item)
                 }
             }
         }

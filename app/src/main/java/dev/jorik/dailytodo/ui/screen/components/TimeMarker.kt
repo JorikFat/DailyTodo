@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.sp
 import dev.jorik.dailytodo.domain.AppTime
 
 @Composable
-fun TimeMarkerCard(appTime: AppTime) {
+fun TimeMarker(appTime: AppTime) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth()
