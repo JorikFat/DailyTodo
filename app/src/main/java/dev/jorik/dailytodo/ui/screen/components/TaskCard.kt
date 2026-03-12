@@ -15,9 +15,12 @@ import androidx.compose.ui.unit.dp
 import dev.jorik.dailytodo.domain.Task
 
 @Composable
-fun TaskCard(task: Task) {
+fun TaskCard(
+    task: Task,
+    onTaskClick: () -> Unit
+) {
     Card(
-        onClick = { TODO("Открывать диалог взаимодействия") }
+        onClick = onTaskClick
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,

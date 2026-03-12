@@ -15,25 +15,27 @@ import dev.jorik.dailytodo.domain.AppTime
 
 @Composable
 fun TimeMarker(appTime: AppTime) {
+    val markerColor = if (appTime.delta >= 0) Color.Green else Color.Red
+
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth()
     ) {
         HorizontalDivider(
-            color = Color.Green,
+            color = markerColor,
             thickness = 2.dp,
             modifier = Modifier.weight(1f)
         )
 
         Text(
             text = appTime.time,
-            color = Color.Green,
+            color = markerColor,
             fontSize = 14.sp,
             modifier = Modifier.padding(horizontal = 8.dp)
         )
 
         HorizontalDivider(
-            color = Color.Green,
+            color = markerColor,
             thickness = 2.dp,
             modifier = Modifier.weight(1f)
         )
